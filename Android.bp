@@ -20055,50 +20055,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_library_shared {
-	name: "liboplus-uah-client",
-	owner: "oneplus",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/odm/lib64/liboplus-uah-client.so"
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.urcc-V1-ndk_platform",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbinder_ndk",
-            ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "vendor.oplus.hardware.urcc-V1-ndk_platform",
-	owner: "oneplus",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/odm/lib64/vendor.oplus.hardware.urcc-V1-ndk_platform.so"
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-            ],
-		},
-	},
-	compile_multilib: "64",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm@1.0-impl",
     owner: "oneplus",
     strip: {
