@@ -976,7 +976,6 @@ PRODUCT_PACKAGES += \
     libkeymasterprovision \
     libkeymasterutils \
     liblbs_core \
-    liblearningmodule \
     libloc_api_v02 \
     libloc_core \
     libloc_socket \
@@ -986,7 +985,6 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_wifihal \
     liblqe \
-    libmeters \
     libminkdescriptor \
     libminksocket \
     libnetmgr_common \
