@@ -867,6 +867,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libgsl",
                 "libutils",
+                "libadreno_utils",
                 "libnativewindow",
                 "libvndksupport",
                 "libgralloc.qti",
@@ -893,6 +894,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libgsl",
                 "libutils",
+                "libadreno_utils",
                 "libnativewindow",
                 "libvndksupport",
                 "libgralloc.qti",
@@ -932,6 +934,8 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libcutils",
+                "liblog",
             ],
         },
         android_arm64: {
@@ -943,6 +947,8 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libcutils",
+                "liblog",
             ],
         },
     },
@@ -1056,6 +1062,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "liblog",
             ],
         },
     },
@@ -1113,6 +1120,43 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libc",
                 "libm",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libadreno_compiler_cl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libadreno_compiler_cl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libadreno_compiler_cl.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -2038,6 +2082,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "liblog",
             ],
         },
         android_arm64: {
@@ -2050,6 +2095,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "liblog",
             ],
         },
     },
