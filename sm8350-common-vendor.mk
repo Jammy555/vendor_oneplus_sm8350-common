@@ -759,6 +759,7 @@ PRODUCT_PACKAGES += \
     libGLESv2_adreno \
     libq3dtools_adreno \
     libq3dtools_esx \
+    libVkLayer_ADRENO_qprofiler \
     android.hardware.bluetooth@1.0-impl-qti \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
@@ -771,6 +772,7 @@ PRODUCT_PACKAGES += \
     libCB \
     libOpenCL \
     libVkLayer_q3dtools \
+    libOpenCL_adreno \
     libadreno_app_profiles \
     libadreno_utils \
     libadsprpc \
@@ -923,6 +925,8 @@ PRODUCT_PACKAGES += \
     lib-imsxml \
     lib-rtpcommon \
     lib-rtpcore \
+    libllvm-qgl \
+    libadreno_compiler_cl \
     lib-rtpsl \
     libGPQTEEC_vendor \
     libGPTEE_vendor \
