@@ -5400,7 +5400,6 @@ cc_prebuilt_library_shared {
     prefer: true,
     soc_specific: true,
 }
-
 cc_prebuilt_library_shared {
     name: "libqcbassboost",
     owner: "oneplus",
@@ -5421,12 +5420,26 @@ cc_prebuilt_library_shared {
                 "libdl",
             ],
         },
+            android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libqcbassboost.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     relative_install_path: "soundfx",
     prefer: true,
     soc_specific: true,
 }
+
 
 cc_prebuilt_library_shared {
     name: "libqcreverb",
@@ -5448,8 +5461,21 @@ cc_prebuilt_library_shared {
                 "libdl",
             ],
         },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libqcreverb.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     relative_install_path: "soundfx",
     prefer: true,
     soc_specific: true,
@@ -5462,6 +5488,19 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libqcvirt.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
         android_arm: {
             srcs: [
                 "proprietary/vendor/lib/soundfx/libqcvirt.so",
@@ -5476,11 +5515,12 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "32",
+    compile_multilib: "both",
     relative_install_path: "soundfx",
     prefer: true,
     soc_specific: true,
 }
+
 
 cc_prebuilt_library_shared {
     name: "libshoebox",
