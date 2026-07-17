@@ -5029,6 +5029,7 @@ cc_prebuilt_library_shared {
     prefer: true,
     soc_specific: true,
 }
+
 cc_prebuilt_library_shared {
     name: "libqcbassboost",
     owner: "oneplus",
@@ -17016,6 +17017,14 @@ sh_binary {
     owner: "oneplus",
     src: "proprietary/vendor/bin/init.qti.chg_policy.sh",
     filename: "init.qti.chg_policy.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel",
+    owner: "oneplus",
+    src: "proprietary/vendor/bin/init.qti.kernel.sh",
+    filename: "init.qti.kernel.sh",
     soc_specific: true,
 }
 
